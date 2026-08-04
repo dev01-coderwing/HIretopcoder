@@ -11,8 +11,10 @@ export default function Page() {
       <div className=" pt-20 md:pt-28 "><Breadcrumb items={[{ label: "Home", to: "/" }, { label: "Services" }, { label: "Offshore Dev Centre" }]} /></div>
       <PageHero
         eyebrow="GCC Model"
-        title={<>Offshore <span className="text-primary">Development Centre</span></>}
+        title={<>Offshore <span className="text-primary font-display font-bold leading-[0.95] text-[clamp(2.6rem,8vw,7rem)] md:text-[clamp(2.75rem,8vw,7.5rem)] 2xl:text-[clamp(3rem,9vw,8.5rem)]">Development Centre</span></>}
         sub={<>Set up your own Global Capability Centre in 90 days — talent, compliance <br/> infrastructure, and management, all run by us.</>}
+       titleClassName="text-[clamp(2.4rem,7vw,6rem)] md:text-[clamp(2.6rem,7vw,6.5rem)] 2xl:text-[clamp(2.8rem,8vw,7rem)]"
+
         notpt="notpt"  />
       <Section className="   ">
         <SectionTitle eyebrow="Model" title="The GCC Model Explained" />
@@ -37,14 +39,14 @@ export default function Page() {
       <Section className="   ">
         
         <SectionTitle eyebrow="Timeline" title="90-Day Setup" />
-        <div className="space-y-3 w-full grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-10 lg:px-20 1xl:px-40">
+        <div className="space-y-3  w-full grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-10 lg:px-20 1xl:px-40">
           {[
             { w: "Week 1–2", t: "Planning", d: "Org design, role mapping, location strategy." },
             { w: "Week 3–6", t: "Hiring", d: "Recruit & vet 80% of seed roles." },
             { w: "Week 7–10", t: "Infrastructure", d: "Office, devices, security, IT stack live." },
             { w: "Week 11–12", t: "Go-live", d: "Team online, first sprint shipped." },
           ].map((s) => (
-            <Card key={s.w} className="flex md:gap-6 items-center">
+            <Card key={s.w} className="flex md:gap-6 items-center hover-glow-card bg-[oklch(0.18_0.02_290_/_0.7)]">
               <div className="text-primary font-sans font-semibold text-[10px]  md:text-xs uppercase tracking-[0.15em] w-28 flex-shrink-0">{s.w}</div>
               <div>
                 <div className="text-white text-xs md:text-base font-semibold">{s.t}</div>
@@ -60,8 +62,10 @@ export default function Page() {
       <div className="relative  w-full">
         <SectionTitle eyebrow="Cost" title="GCC vs In-house, side by side" />
         <div className="grid md:grid-cols-2 md:gap-5 max-w-3xl mx-auto">
-          <Card><div className="text-[8px] md:text-[11px] uppercase tracking-[0.2em] text-foreground/40 mb-2">In-house (US)</div><div className="text-2xl md:text-4xl font-extrabold text-white">$1.8M</div><div className="text-foreground/55 text-[10px] md:text-sm mt-2">Annual cost for 10 engineers + ops</div></Card>
-          <Card className="border-primary/30"><div className="text-[8px] text-[11px] uppercase tracking-[0.2em] text-primary mb-2 font-bold">GCC with us</div><div className="text-2xl md:text-4xl font-extrabold text-white">$680K</div><div className="text-foreground/55 text-[10px] md:text-sm mt-2">Same 10 engineers, fully managed</div></Card>
+          <Card><div className="hover-glow-card bg-[oklch(0.18_0.02_290_/_0.7)]
+  text-[8px] md:text-[11px] uppercase tracking-[0.2em] text-foreground/40 mb-2">In-house (US)</div><div className="text-2xl md:text-4xl font-extrabold text-white">$1.8M</div><div className="text-foreground/55 text-[10px] md:text-sm mt-2">Annual cost for 10 engineers + ops</div></Card>
+          <Card className="border-primary/30 hover-glow-card bg-[oklch(0.18_0.02_290_/_0.7)]
+ "><div className="text-[8px] text-[11px] uppercase tracking-[0.2em] text-primary mb-2 font-bold">GCC with us</div><div className="text-2xl md:text-4xl font-extrabold text-white">$680K</div><div className="text-foreground/55 text-[10px] md:text-sm mt-2">Same 10 engineers, fully managed</div></Card>
         </div></div>
       </Section>
 

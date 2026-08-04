@@ -15,11 +15,12 @@ export default function Page() {
   const monthly = rate * hours;
   return (
  <main className=" w-full"    >
-      <div className="pt-20 md:pt-28 "><Breadcrumb items={[{ label: "Home", to: "/" }, { label: "Resources" }, { label: "Dev Rates 2026" }]} /></div>
+      <div className="pt-10 md:pt-14 "><Breadcrumb items={[{ label: "Home", to: "/" }, { label: "Resources" }, { label: "Dev Rates 2026" }]} /></div>
       <PageHero eyebrow="Guide · Updated June 2026" title={<>Offshore Developer <span className="text-primary">Rates 2026</span></>} sub="Benchmark rates for the regions and stacks that actually matter, refreshed quarterly." />
       <Section className="  ">
         <SectionTitle eyebrow="Region" title="Rate Comparison by Region" />
         <ComparisonTable
+          className="hover-glow-card bg-[oklch(0.18_0.02_290_/_0.7)]"
           headers={["Region", "Junior", "Mid", "Senior"]}
           rows={[
             ["India", "$30/hr", "$55/hr", "$85/hr"],
@@ -29,8 +30,10 @@ export default function Page() {
         />
       </Section>
       <Section className="  ">
-        <SectionTitle eyebrow="Stack" title="Rate by Tech Stack" />
+        <SectionTitle eyebrow="Stack" title="Rate by Tech Stack"  />
         <ComparisonTable
+        className="hover-glow-card bg-[oklch(0.18_0.02_290_/_0.7)]
+ "
           headers={["Stack", "India", "Eastern Europe", "LATAM"]}
           rows={[
             ["React / Next.js", "$55", "$70", "$75"],
@@ -68,7 +71,7 @@ export default function Page() {
           </div>
         </Card>
       </div></Section>
-      <Section className="  ">
+      <Section className=" hover-glow-card ">
         <SectionTitle eyebrow="Insights" title="Key takeaways" />
         <div className="grid md:grid-cols-3 md:gap-5">
           {[

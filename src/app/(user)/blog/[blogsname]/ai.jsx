@@ -620,7 +620,7 @@ export const Question6FAQ = ({ques6faqcontent}) => {
       {" "}
       <h2
         id="faq"
-        className="text-xl 2xl:text-2xl font-semibold text-white tracking-tight mt-12 pt-6 border-t border-white/5 mb-4"
+        className=" text-xl 2xl:text-2xl font-semibold text-white tracking-tight mt-12 pt-6 border-t border-white/5 mb-4"
       >
        Frequently Asked Questions</h2>
       <div className="mt-4 mb-8">
@@ -628,7 +628,7 @@ export const Question6FAQ = ({ques6faqcontent}) => {
           const isOpen = openFaq === i;
           return (
             <FadeUp key={f.q} delay={i * 0.06}>
-              <div className="bg-[#0d0d0d] border border-[oklch(0.62_0.26_305/0.15)] rounded-sm mb-2.5 overflow-hidden">
+              <div className="hover-glow-card bg-[oklch(0.18_0.02_290_/_0.7)]  border border-[oklch(0.62_0.26_305/0.15)] rounded-sm mb-2.5 overflow-hidden">
                 <button
                   type="button"
                   onClick={() => setOpenFaq(isOpen ? -1 : i)}

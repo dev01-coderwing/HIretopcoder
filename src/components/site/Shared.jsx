@@ -129,7 +129,8 @@ export function PageHero({
   title,
   sub,
   children,
-  notpt
+  notpt,
+  titleClassName,
 }) {
   return (
 <section className={`relative  ${notpt==="notpt" ?"pt-7":" pt-20 md:pt-40 2xl:pt-50"}   px-4`}>
@@ -143,10 +144,12 @@ export function PageHero({
              {eyebrow}
            </div>
    
-           <h1 className="font-display font-bold leading-[0.95] text-[clamp(2.6rem,8vw,7rem)] md:text-[clamp(2.75rem,8vw,7.5rem)] 2xl:text-[clamp(3rem,9vw,8.5rem)]">
-            {title}
-             
-           </h1>
+         <h1
+  className={`font-display font-bold leading-[0.95]
+  ${titleClassName || "text-[clamp(2.6rem,8vw,7rem)] md:text-[clamp(2.75rem,8vw,7.5rem)] 2xl:text-[clamp(3rem,9vw,8.5rem)]"}`}
+>
+  {title}
+</h1>
    
            <p className="mt-6 md:mt-12 text-sm md:text-base lg:text-xl  text-[#b1afb8] max-w-3xl mx-auto leading-relaxed font-normal">
 {sub}           </p>
@@ -178,7 +181,7 @@ export function SectionTitle({
     <Reveal>
     <div className="text-center ">
       {eyebrow && (
-       <div className="inline-flex items-center gap-2 text-[8px] md:text-[10px] md:text-xs 2xl:text-sm font-sans uppercase tracking-[0.25em] text-primary mb-4 font-bold">
+       <div className="inline-flex items-center gap-2 text-[12px] md:text-[14px] md:text-xs 2xl:text-sm font-sans uppercase tracking-[0.25em] text-primary mb-4 font-bold">
           <span className="size-1 rounded-full bg-primary" /> {eyebrow}
         </div>
       )}
@@ -254,7 +257,8 @@ export function CTABanner({
   return (
     <section className="relative px-4 sm:px-6 lg:px-15 1xl:px-20 2xl:px-25   py-10  lg:py-28 2xl:py-35   ">
       <Reveal>
-      <div className="mx-auto max-w-5xl relative rounded-2xl glass p-5 md:p-12 lg:p-16 text-center overflow-hidden glow-purple-strong">
+      <div className="mx-auto max-w-5xl relative rounded-2xl glass p-5 md:p-12 lg:p-16 text-center overflow-hidden hover-glow-card bg-[oklch(0.18_0.02_290_/_0.7)]
+ ">
                 <div className="absolute -top-32 left-1/2 -translate-x-1/2 size-[500px] rounded-full bg-primary/30 blur-[120px]" />
         <div className="relative text-center">
           <h3 className="text-[26px] md:text-4xl lg:text-5xl font-extrabold text-gradient-purple leading-tight">{title}</h3>
@@ -290,10 +294,11 @@ export function Breadcrumb({ items }) {
 export function ComparisonTable({
   headers,
   rows,
+  className = "",
 }) {
   return (
     <Reveal>
-    <div className="overflow-hidden mt-5  md:mt-10 rounded-[10px] border border-white/[0.07] bg-[#0d0d0d]">
+    <div className={`overflow-hidden mt-5  md:mt-10 rounded-[10px] border border-white/[0.07] bg-[#0d0d0d] ${className}`}>
       <table className="w-full overflow-y-scroll text-sm">
         <thead>
           <tr className="border-b border-white/[0.07] bg-white/[0.02]">

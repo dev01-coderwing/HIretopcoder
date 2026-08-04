@@ -5,14 +5,13 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FiBookOpen as BookOpen, FiLayers as Calculator, FiFileText as FileText } from "react-icons/fi";
 
 export const footerData={
-     services : [
-
-  {name:"UI/UX Design" ,to:"/"}, {name:"Full-Stack Development" ,to:"/"}, {name:"Mobile App Development" ,to:"/"},
-
-  {name:"AI / ML Engineering" ,to:"/"}, {name:"DevOps & Cloud" ,to:"/"}, {name:"No-Code Development" ,to:"/"},
-
-  {name:"Graphic Design" ,to:"/"}, {name:"Growth Marketing" ,to:"/"},
-
+services: [
+  { name: "Dedicated Expert Teams", to: "/services/dedicated-teams" },
+  { name: "IT Staff Augmentation", to: "/services/staff-augmentation" },
+  { name: "Offshore Development Center", to: "/services/offshore-dev-centre" },
+  { name: "Legacy System Modernization", to: "/services/legacy-modernization" },
+  { name: "MVP Development", to: "/services/mvp-development" },
+  { name: "Scale Your Engineering Team", to: "/hire" },
 ],
  
  hireRoles : [

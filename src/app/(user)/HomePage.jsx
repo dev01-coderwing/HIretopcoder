@@ -47,12 +47,12 @@ function Hero() {
           Build faster with elite digital experts
         </div>
 
-        <h1 className="font-display font-bold leading-[0.95] text-[clamp(2.6rem,8vw,7rem)] md:text-[clamp(2.75rem,8vw,7.5rem)] 2xl:text-[clamp(3rem,9vw,8.5rem)]">
+        <h1 className="font-display font-bold leading-[0.95]  md:text-[clamp(2.75rem,8vw,7.5rem)] 2xl:text-[clamp(3rem,9vw,8.5rem)]">
           Hire elite <br />
           <span className="text-gradient-purple">digital experts.</span>
         </h1>
 
-        <p className="mt-6 md:mt-12 text-sm md:text-base lg:text-xl  text-[#b1afb8] max-w-3xl mx-auto leading-relaxed font-normal">
+        <p className="mt-6 md:mt-12 text-xs md:text-base lg:text-[20px]  text-[#b1afb8] max-w-3xl mx-auto leading-relaxed font-normal">
           The best designers, engineers, marketers and strategists in the world,
           ready to hire in 24 hours. AI-matched, human-vetted, and instantly
           available.
@@ -98,8 +98,7 @@ function ExpertCard({ expert }) {
         background: `linear-gradient(180deg, ${expert.accent}, transparent 60%)`,
       }}
     >
-      {/* 🛠️ स्टेप 1: बैज को हमने overflow-hidden वाले डिब से बाहर निकाल दिया */}
-      {/* -top-2 या -top-1 करके आप इसे जितना चाहें उतना ऊपर कार्ड की बॉर्डर के पार दिखा सकते हैं */}
+    
       <div
         className="absolute -top-2 left-1/2 -translate-x-1/2 z-20 text-[8px] md:text-[9px] 2xl:text-[11px] font-sans uppercase tracking-[0.2em] px-3.5 py-1.5 rounded-md font-bold whitespace-nowrap shadow-xl"
         style={{
@@ -116,8 +115,8 @@ function ExpertCard({ expert }) {
         <Image width={500} height={500}
           src={expert.img}
           alt={`${expert.name}, ${expert.role}`}
-          height={800}
-          width={640}
+          // height={800}
+          // width={640}
           loading="lazy"
           className="w-full aspect-[4/5] object-cover"
         />
@@ -347,7 +346,6 @@ function Testimonials() {
   const [isMobile, setIsMobile] = useState(false);
   const timeoutRef = useRef(null);
 
-  // अनंत लूप के लिए: अंत में पहले दो आइटम्स की कॉपी जोड़ रहे हैं ताकि स्लाइड स्मूथ रहे
   const extendedItems =
     testimonials.length > 0
       ? [...testimonials, ...testimonials.slice(0, 2)]
@@ -367,7 +365,6 @@ function Testimonials() {
   useEffect(() => {
     if (testimonials.length <= 2) return;
 
-    // ऑटोमैटिक स्लाइडर शुरू करें
     timeoutRef.current = setInterval(() => {
       setCurrentIndex((prevIndex) => prevIndex + 1);
       setIsTransitioning(true);
@@ -378,19 +375,17 @@ function Testimonials() {
     };
   }, [testimonials.length]);
 
-  // जब स्लाइडर आखिरी डुप्लिकेट्स पर पहुंचे, तो बिना एनीमेशन के पहले कार्ड्स पर कूदें
   useEffect(() => {
     if (currentIndex === testimonials.length) {
       const snapTimeout = setTimeout(() => {
-        setIsTransitioning(false); // एनीमेशन बंद करें
-        setCurrentIndex(0); // चुपके से पहले कार्ड पर जाएँ
+        setIsTransitioning(false); 
+        setCurrentIndex(0); 
       }, 700); // transition-duration (700ms)
 
       return () => clearTimeout(snapTimeout);
     }
   }, [currentIndex, testimonials.length]);
 
-  // एनीमेशन रीसेट होने के बाद वापस चालू करें
   useEffect(() => {
     if (!isTransitioning && currentIndex === 0) {
       const raf = requestAnimationFrame(() => {
@@ -426,9 +421,8 @@ function Testimonials() {
           />
        
 
-        {/* मुख्य स्लाइडर रैपर */}
         <div className="w-full overflow-hidden pt-10 lg:pt-20">
-          {/* स्लाइडिंग ट्रैक - मोबाइल पर 1 कार्ड, md स्क्रीन से 2 कार्ड्स दिखेंगे */}
+          
           <div
             className={`flex flex-row w-full ${isTransitioning ? "transition-transform duration-700 ease-in-out" : ""}`}
             style={{
@@ -439,7 +433,7 @@ function Testimonials() {
             {extendedItems.map((review, index) => (
               <div
                 key={`${review.id}-${index}`}
-                className="w-full md:w-1/2 shrink-0 p-1.5 md:p-2.5 lg:p-5" // यहाँ चौड़ाई आपके ओरिजिनल grid-cols-2 जैसी है
+                className="w-full md:w-1/2 shrink-0 p-1.5 md:p-2.5 lg:p-5" 
               > <div className="group relative bg-gradient-to-t from-black/80 to-transparent rounded-[16px] border border-[oklch(0.62_0.26_305/0.15)] hover-glow-card p-4 sm:p-6 md:p-10 flex flex-col justify-between transition-all duration-500 h-full">
                
                   <div>
@@ -551,7 +545,6 @@ function Blog() {
                     alt={p.title}
                     width={1024}
                     height={1024}
-                    /* 3. 'will-change-transform' और 'style' में backface-visibility जोड़ने से ब्राउज़र पिक्सल को कभी मिस-अलाइन नहीं करेगा */
                     className="size-full object-cover group-hover:scale-110 will-change-transform transition-transform duration-700 pointer-events-none"
                     style={{
                       backfaceVisibility: "hidden",

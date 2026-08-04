@@ -162,18 +162,28 @@ export function Hero({title,heading,des,btn1href,btn1name,btn2href,btn2name,clas
   </div>)
 }
 
-export function HeadSection({title,name,des,className}){
-  return(<Reveal>
+export function HeadSection({
+  title,
+  name,
+  des,
+  className,
+  nameClassName,
+}) {
+  return (
+    <Reveal>
+      <div className={className}>
+        {title && <p className="text-primary font-bold">{title}</p>}
 
-   <div className={` grid ${className}`}>
- { title && <p className="text-primary font-bold ">{title}</p>}
-  <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold leading-[1.05]" >{name}</h2>
-   { des && <p className="mt-2 text-foreground/75 text-xs md:text-base lg:text-xl  font-normal">{des}</p>}
-  
-  </div>
-  </Reveal>
-  
-  )
+        <h2
+          className={`text-2xl md:text-3xl lg:text-5xl font-bold ${nameClassName}`}
+        >
+          {name}
+        </h2>
+
+        {des && <p>{des}</p>}
+      </div>
+    </Reveal>
+  );
 }
 
 export function TechSpecialization({techspecialization}){

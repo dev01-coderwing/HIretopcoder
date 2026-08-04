@@ -106,7 +106,7 @@ export  function CTA({title,des,btn1name,btn1href,btn2name,btn2href}) {
   return (
     <section className="relative  px-4 sm:px-6 lg:px-15 1xl:px-20 2xl:px-25 py-10 lg:py-20    ">
       <Reveal>
-        <div className="mx-auto max-w-5xl relative rounded-3xl glass p-6 sm:p-8 md:p-12 lg:p-16 text-center overflow-hidden glow-purple-strong">
+        <div className="mx-auto max-w-5xl relative rounded-3xl glass p-6 sm:p-8 md:p-12 lg:p-16 text-center overflow-hidden hover-glow-card">
           <div className="absolute -top-32 left-1/2 -translate-x-1/2 size-[500px] rounded-full bg-primary/30 blur-[120px]" />
           <div className="relative">
             <h2 className="text-[26px] md:text-4xl lg:text-5xl font-bold sm:font-extrabold leading-tight">

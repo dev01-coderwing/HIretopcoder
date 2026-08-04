@@ -9,12 +9,13 @@ export default function Page() {
   return (
     <main className=" w-full"    >
       <div className="pt-20 md:pt-28 "><Breadcrumb items={[{ label: "Home", to: "/" }, { label: "Services" }, { label: "Staff Augmentation" }]} /></div>
-      <PageHero
-        eyebrow="Delivery Model"
-        title={<>IT <span className="text-gradient-purple">Staff Augmentation</span></>}
-        sub={<>Plug vetted engineers directly into your existing  team — your <br className="hidden md:block" /> tools,  your process, your timeline.</>}
-           notpt="notpt"
-      />
+  <PageHero
+  eyebrow="Delivery Model"
+  title={<>IT <span className="text-gradient-purple">Staff Augmentation</span></>}
+  sub={<>Plug vetted engineers directly into your existing team...</>}
+  titleClassName="text-[clamp(2.4rem,7vw,6rem)] md:text-[clamp(2.6rem,7vw,6.5rem)] 2xl:text-[clamp(2.8rem,8vw,7rem)]"
+  notpt="notpt"
+/>
       <Section  className="   ">
         <SectionTitle eyebrow="When To Use" title="The right scenarios" />
         <div className="grid md:grid-cols-3 gap-2 md:gap-5">
@@ -29,6 +30,8 @@ export default function Page() {
       <Section className="   ">
         <SectionTitle eyebrow="Compare" title="Staff Augmentation vs Dedicated Teams" />
         <ComparisonTable
+        className="hover-glow-card bg-[oklch(0.18_0.02_290_/_0.7)]
+ "
           headers={["Dimension", "Staff Augmentation", "Dedicated Team"]}
           rows={[
             ["Cost", "Hourly / monthly per engineer", "Fixed monthly retainer"],
@@ -62,7 +65,8 @@ export default function Page() {
       </Section>
       <Section className="   ">
         <SectionTitle eyebrow="FAQ" title="Common questions" />
-        <FAQ items={[
+        <FAQ className=" hover-glow-card bg-[oklch(0.18_0.02_290_/_0.7)]
+   " items={[
           { q: "Minimum engagement length?", a: "We typically engage for a minimum of 4 weeks." },
           { q: "Who manages the engineer day-to-day?", a: "You do. The engineer joins your standups, sprints, and review process." },
           { q: "What time zones do you cover?", a: "Engineers are available in overlap windows for US, EU, and APAC schedules." },

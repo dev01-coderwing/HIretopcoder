@@ -216,14 +216,24 @@ cleanliness, and rapid delivery across modern stacks.</>}  className=" flex just
 
 <div>
 <Reveal>
-<div className="flex justify-between items-center ">
- <div className=""><p className="uppercase text-sm text-primary">why full stack</p>
-<h2 className="text-xl md:text-3xl lg:text-4xl font-bold leading-[1.05]" >Engineers who understand the whole <br/>
-system build better products.</h2></div>
- <div className=""> <p className=" text-white/50 ">Eliminate the friction between front-end and back- <br/>
-end silos with developers who own the entire <br/>
-lifecycle.</p>
- </div>
+<div className="flex flex-col items-center text-center">
+
+  <div>
+    <p className="uppercase text-sm text-primary">why full stack</p>
+
+    <h2 className="mt-2 text-xl md:text-3xl lg:text-4xl font-bold leading-[1.05]">
+      Engineers who understand the whole <br />
+      system build better products.
+    </h2>
+  </div>
+
+  <div className="mt-5 max-w-2xl">
+    <p className="text-white/50">
+      Eliminate the friction between front-end and back-end silos with
+      developers who own the entire lifecycle.
+    </p>
+  </div>
+
 </div>
 
 <Card features={features}/>
@@ -231,7 +241,12 @@ lifecycle.</p>
 </div>
 
 <div className="">
-  <HeadSection name="Transparent Engineering Rates" des="No hidden fees. Premium talent at global market rates." className=" flex justify-center items-center  text-center max-w-2xl mx-auto" />
+<HeadSection
+  name="Transparent Engineering Rates"
+  des="No hidden fees. Premium talent at global market rates."
+  className="flex flex-col items-center text-center mx-auto max-w-2xl"
+  nameClassName="mb-3"
+/> 
  <Reveal>
   <CapabiliyTable tableHeadData={tableHeadData}  tableData={tableData}/>
   </Reveal> 
@@ -250,7 +265,7 @@ export function EngineersCard({filteredEngineers}){
   return(<> {filteredEngineers.map((e, i) => (
           <div
             key={i}
-            className="bg-[#0f0f0f] border border-primary/10 hover:border-primary p-6 rounded transition-all duration-300"
+            className="hover-glow-card bg-[oklch(0.18_0.02_290_/_0.7)] border border-primary/10 hover:border-primary p-6 rounded transition-all duration-300"
           >
             <div className="flex justify-between items-start mb-6">
               <div className="relative">
@@ -301,21 +316,21 @@ export function SeniorFilter({engineers,filters}){
   
   return (<div className="bg-[#0a0a0a] text-white p-8 font-sans w-full">
       {/* Header & Filter Bar */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12  border-y border-white/50 py-5">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12   py-5">
         <div className="flex items-center gap-3 text-xl font-medium">
           <Filter className="text-xl lg:text-3xl text-primary" />
           Filter by Seniority Level
         </div>
 
         {/* Dynamic Clickable Filter Buttons */}
-        <div className="flex bg-[#111] p-1 rounded-sm border border-white/10 w-fit">
+        <div className="flex p-1 rounded-sm  w-fit">
           {filters.map((f) => {
             const isActive = activeFilter === f.label;
             return (
               <button
                 key={f.label}
                 onClick={() => setActiveFilter(f.label)}
-                className={`px-5 py-2.5 rounded-sm text-sm transition-all duration-300 flex items-center gap-2 cursor-pointer ${
+                className={`px-5 py-2.5 rounded-sm text-sm transition-all hover-glow-card bg-[oklch(0.18_0.02_290_/_0.7)] duration-300 flex items-center gap-2 cursor-pointer ${
                   isActive
                     ? "bg-[#252525] shadow-lg border border-primary"
                     : "text-gray-500 hover:text-gray-300"
@@ -341,7 +356,7 @@ export function SeniorFilter({engineers,filters}){
        <EngineersCard filteredEngineers={filteredEngineers}/>
       </div></Reveal>
 
-      {/* Empty State Guard: अगर किसी फ़िल्टर का डाटा न मिले */}
+      
       {filteredEngineers.length === 0 && (
         <div className="text-center py-16 text-gray-500">
           No engineers found for this seniority level.
@@ -350,13 +365,13 @@ export function SeniorFilter({engineers,filters}){
     </div>)
 };
 export function Card({features}){
-return (<div className=" mt-15 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5  ">
+return (<div className="  mt-15 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5  ">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
               <div
                 key={index}
-                className="p-8 sm:p-9 lg:p-10  border border-primary/50 hover:border-primary  flex flex-col justify-start  group hover:bg-white/[0.02] rounded transition-colors duration-300"
+                className=" hover-glow-card bg-[oklch(0.18_0.02_290_/_0.7)] p-8 sm:p-9 lg:p-10  border border-primary/50 hover:border-primary  flex flex-col justify-start  group hover:bg-white/[0.02] rounded transition-colors duration-300"
               >
                 {/* Icon Section */}
                 <div className="mb-5">
@@ -382,7 +397,8 @@ return (<div className=" mt-15 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ga
 }
 
 export function CapabiliyTable({tableData,tableHeadData}){
-  return(<div className="mt-15 w-full mx-auto overflow-hidden rounded border border-white/[0.08] shadow-2xl bg-[#0B090E]">
+  return(<div className="mt-15 w-full mx-auto overflow-hidden rounded hover-glow-card bg-[oklch(0.18_0.02_290_/_0.7)]
+  shadow-2xl bg-[#0B090E]">
         {/* Table Container for horizontal scrolling on smaller screens */}
         <div className="overflow-x-auto">
           <table className="w-full border-collapse text-left text-xs sm:text-sm">

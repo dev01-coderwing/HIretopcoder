@@ -163,26 +163,23 @@ export function Hero({title,heading,des,btn1href,btn1name,btn2href,btn2name,clas
 }
 
 export function HeadSection({
-  title,
   name,
   des,
   className,
   nameClassName,
 }) {
   return (
-    <Reveal>
-      <div className={className}>
-        {title && <p className="text-primary font-bold">{title}</p>}
+    <div className={className}>
+      <h2 className={`text-2xl md:text-3xl lg:text-5xl font-bold ${nameClassName}`}>
+        {name}
+      </h2>
 
-        <h2
-          className={`text-2xl md:text-3xl lg:text-5xl font-bold ${nameClassName}`}
-        >
-          {name}
-        </h2>
-
-        {des && <p>{des}</p>}
-      </div>
-    </Reveal>
+      {des && (
+        <p className="mt-3 text-center max-w-xl mx-auto text-foreground/70">
+          {des}
+        </p>
+      )}
+    </div>
   );
 }
 

@@ -64,11 +64,14 @@ export function StaggerItem({
 }
 
 export function WordReveal({ text, className = "" }) {
+     <span
+      className={`text-[clamp(2.2rem,6vw,5.5rem)] md:text-[clamp(2.5rem,6vw,6rem)] 2xl:text-[clamp(2.8rem,7vw,6.5rem)] ${className}`}
+      aria-label={text}
+    ></span>
   const words = text.split(" ");
   return (
     <span className={className} aria-label={text}>
       {words.map((w, i) => (
-        /* 🛠️ फ़िक्स: pb-[0.2em] के साथ pt-[0.1em] और mt-[-0.1em] किया ताकि ऊपर-नीचे दोनों तरफ से स्पेस मिले और overflow-hidden अक्षरों को न काटे */
         <span 
           key={i} 
           className="inline-block overflow-hidden pt-[0.1em] pb-[0.2em] mt-[-0.1em] align-bottom"

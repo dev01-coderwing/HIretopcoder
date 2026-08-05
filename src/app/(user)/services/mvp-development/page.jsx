@@ -14,12 +14,14 @@ import Link from "next/link";
         eyebrow="Engineering Service"
         title={<>Investor-Ready <span className="text-primary">MVP in 12 Weeks</span></>}
         sub={<>Strategy, design, code, QA, and launch — one team, one timeline, <br/>one outcome you can show to investors.</>}
+         titleClassName="text-[clamp(2.2rem,6vw,5.5rem)] md:text-[clamp(2.5rem,6vw,6rem)] 2xl:text-[clamp(2.8rem,7vw,6.5rem)]"
          notpt="notpt" />
       <Section   className="   ">
         <SectionTitle eyebrow="Included" title="What's in the box" />
-        <div className="grid md:grid-cols-3 gap-3 w-full mt-5 md:mt-10">
+        <div className="grid md:grid-cols-3  gap-3 w-full mt-5 md:mt-10 ">
           {["Product strategy", "UI/UX design", "Full-stack development", "QA & testing", "Deployment & DevOps", "Technical documentation"].map((f) => (
-            <div key={f} className="flex items-center gap-2 md:gap-3 p-2 md:p-4 rounded-[10px] bg-[#141418] border border-white/[0.07]">
+            <div key={f} className="flex items-center gap-2 md:gap-3 p-2 md:p-4 rounded-[10px] bg-[#141418] border border-white/[0.07] hover-glow-card bg-[oklch(0.18_0.02_290_/_0.7)]
+ ">
               <Check className="size-3 md:size-4 text-primary" />
               <span className="text-foreground/85 text-sm md:text-base">{f}</span>
             </div>

@@ -13,6 +13,7 @@ import { ArrowRight } from "lucide-react";
         eyebrow="Engineering Service"
         title={<>Zero-Downtime <span className="text-gradient-purple">Legacy Upgrades</span></>}
         sub={<>Modernize tired PHP, jQuery, or .NET stacks into cloud-native <br/> React/Node systems — without breaking production.</>}
+        titleClassName="text-[clamp(2.2rem,6vw,5.5rem)] md:text-[clamp(2.5rem,6vw,6rem)] 2xl:text-[clamp(2.8rem,7vw,6.5rem)]"
         notpt="notpt"  />
       <Section  className="   ">
         <SectionTitle eyebrow="Approach" title="Our Modernization Approach" />

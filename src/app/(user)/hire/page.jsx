@@ -85,7 +85,6 @@ export default function HirePage() {
     </h1>
 
     <Reveal delay={0.3}>
-      {/* mx-auto और max-w-2xl से पैराग्राफ टेक्स्ट सेंटर में रहेगा और ज्यादा फैलेगा नहीं */}
       <p className="mt-6 w-full max-w-2xl mx-auto text-lg text-foreground/75 font-medium">
         Connect with top-tier developers, designers, AI specialists,
         marketers and consultants — matched to your brief in minutes.

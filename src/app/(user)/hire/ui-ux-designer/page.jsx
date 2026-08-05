@@ -157,9 +157,9 @@ export default function Page() {
 <section className="w-full pt-30 md:pt-48 px-4 sm:px-6 lg:px-15 1xl:px-20 2xl:px-25">
     <div className="">
 
- <Hero title="PREMIUM TALENT NETWORK" heading={<> Hire Vetted 
+ <Hero title="PREMIUM TALENT NETWORK " heading={<> Hire Vetted 
 
-<span className="text-gradient-purple"> UI/UX Designers </span>
+<span className="text-gradient-purple text-[clamp(2.2rem,6vw,5.5rem)] md:text-[clamp(2.5rem,6vw,6rem)] 2xl:text-[clamp(2.8rem,7vw,6.5rem)]"> UI/UX Designers </span>
 
           </>} des={<>Access the top 1% of design talent. Our designers specialize in creating high- <br/>
 conversion, technically sophisticated interfaces for global scale products.</>}  className=" flex justify-center items-center  text-center  mx-auto" />
@@ -233,7 +233,7 @@ conversion, technically sophisticated interfaces for global scale products.</>} 
 </div>
 
 <div className="grid py-20 gap-15 lg:gap-30">
-  <div className=" w-full  border-y border-white/50 py-5 mx-auto text-center">
+  <div className=" w-full  py-5 mx-auto text-center">
         {/* Uppercase Small Section Title */}
         <h4 className="text-[11px] sm:text-xs font-semibold tracking-[0.25em] text-[#8E879A] uppercase mb-10">
           STACK PROFICIENCY
@@ -262,10 +262,21 @@ conversion, technically sophisticated interfaces for global scale products.</>} 
       </div>
 <div className="grid gap-15">
 
-      <div className="flex justify-between items-center">
-        <div>  <HeadSection name="Available Experts" des="Top designers available for immediate engagement." /></div>
-        <div><p className="text-primary font-bold ">See All 120+ Expert</p></div>
-      </div>
+   <div className="relative flex items-center justify-center">
+
+  {/* Center Content */}
+  <HeadSection
+    name="Available Experts"
+    des="Top designers available for immediate engagement."
+    className="text-center"
+  />
+
+  {/* Right Side */}
+  <p className="absolute right-0 top-1/2 -translate-y-1/2 text-primary font-bold cursor-pointer">
+    See All 120+ Expert
+  </p>
+
+</div>
       <Reveal>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
      <EngineersCard filteredEngineers={engineers}/>
@@ -273,8 +284,12 @@ conversion, technically sophisticated interfaces for global scale products.</>} 
 </div>
 
 <div className="grid gap-15">
-    <HeadSection name="Crafted by Our Talent" des="Witness the precision and technical excellence of designs delivered through
-our network." className=" flex justify-center items-center  text-center max-w-2xl mx-auto" />
+    <HeadSection
+  name="Crafted by Our Talent"
+  des="Witness the precision and technical excellence of designs delivered through our network."
+  className="text-center"
+  nameClassName="mb-3"
+/>
 <Reveal>
 <div className=" w-full mx-auto grid grid-cols-1 lg:grid-cols-3 gap-5">
         
@@ -337,7 +352,7 @@ our network." className=" flex justify-center items-center  text-center max-w-2x
 
 </div>
 <Reveal>
-<div className=" w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4  items-center border-b border-white/50 pb-20">
+<div className=" w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4  items-center pb-20">
         
         {/* ================= LEFT CONTENT SECTION ================= */}
         <div className=" flex flex-col justify-center">
@@ -383,7 +398,8 @@ No hidden fees, just elite talent billed simply." />
         
         <div className=" flex justify-center lg:justify-end">
           
-          <div className="relative w-full max-w-md bg-[#100F15] border border-primary/50 hover:border-primary rounded-sm p-8 sm:p-10 shadow-2xl overflow-hidden">
+          <div className="relative w-full max-w-md hover-glow-card bg-[oklch(0.18_0.02_290_/_0.7)]
+  border border-primary/50 hover:border-primary rounded-sm p-8 sm:p-10 shadow-2xl overflow-hidden">
             
             {/* Top Right Badge: MOST POPULAR */}
             <div className="absolute top-0 right-0">

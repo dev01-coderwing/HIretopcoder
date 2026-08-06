@@ -298,7 +298,8 @@ export function ComparisonTable({
 }) {
   return (
     <Reveal>
-    <div className={`overflow-hidden mt-5  md:mt-10 rounded-[10px] border border-white/[0.07] bg-[#0d0d0d] ${className}`}>
+    <div className={`overflow-hidden mt-5  md:mt-10 rounded-[10px] border hover-glow-card bg-[oklch(0.18_0.02_290_/_0.7)]
+  ${className}`}>
       <table className="w-full overflow-y-scroll text-sm">
         <thead>
           <tr className="border-b border-white/[0.07] bg-white/[0.02]">

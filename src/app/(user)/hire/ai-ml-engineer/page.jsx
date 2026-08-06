@@ -120,46 +120,120 @@ export default function Page() {
 //       <CTABanner />
 //     </main >
 
-<section className="  w-full pt-30 md:pt-48 px-4 sm:px-6 lg:px-15 1xl:px-20 2xl:px-25" >
-  <Hero title="elight talent network" heading={<> Hire  <span className="text-gradient-purple">AI/Ml Engineers </span><br /> &
-          LLM Specialist</>} des={<> Deploy production-ready artificial intelligence. From Large Language Models <br/>
-to Computer Vision, we source the top 1% of technical talent to scale your <br/>
-intelligent infrastructure.</>} btn1name="Shedule Technical Discovery" btn1href="/" btn2name="Browse Talent" btn2href="/" />
-<div className="grid pt-10 pb-20 lg:mt-25 gap-15 lg:gap-30">
+<section className="w-full pt-30 md:pt-48 px-4 sm:px-6 lg:px-15 1xl:px-20 2xl:px-25 flex flex-col items-center">
 
+  <div className="w-full max-w-7xl flex flex-col items-center">
 
-  <TechSpecialization techspecialization={techspecialization}/>
-  
-  <FeaturedEngineer/>
-  <UseCases/>
-  <FAQ faqData={faqData} />
-  <CTA title={<>Ready to scale <span className="text-gradient-purple"> your AI capabilities</span>?</>} des="Book a consultation with our technical talent directors to define your hiring
-roadmap and see matched profiles within 48 hours." btn1name="Hire an AI Expert" btn1href="/" btn2name="View Pricing Plans" btn2href="/" />
-</div>
+    <Hero
+      title="elight talent network"
+      heading={
+        <>
+          Hire <span className="text-gradient-purple">AI/Ml Engineers </span>
+          
+          & LLM Specialist
+        </>
+      }
+      des={
+        <>
+          Deploy production-ready artificial intelligence. From Large Language Models
+          <br />
+          to Computer Vision, we source the top 1% of technical talent to scale your
+          <br />
+          intelligent infrastructure.
+        </>
+      }
+      btn1name="Shedule Technical Discovery"
+      btn1href="/"
+      btn2name="Browse Talent"
+      btn2href="/"
+    />
+
+    <div className="w-full pt-10 pb-20 lg:mt-25 flex flex-col items-center gap-15 lg:gap-30">
+
+      <TechSpecialization techspecialization={techspecialization} />
+
+      <FeaturedEngineer />
+
+      <UseCases />
+
+      <FAQ faqData={faqData} />
+
+      <CTA
+        title={
+          <>
+            Ready to scale{" "}
+            <span className="text-gradient-purple">
+              your AI capabilities
+            </span>
+            ?
+          </>
+        }
+        des="Book a consultation with our technical talent directors to define your hiring roadmap and see matched profiles within 48 hours."
+        btn1name="Hire an AI Expert"
+        btn1href="/"
+        btn2name="View Pricing Plans"
+        btn2href="/"
+      />
+
+    </div>
+
+  </div>
 
 </section>
   );
 }
 
 
-export function Hero({title,heading,des,btn1href,btn1name,btn2href,btn2name,className,className1}){
-  return(<div className={` ${className}`}>
-    <div className=" ">
-     { title && <div className="inline-flex items-center gap-2 rounded-full px-3 md:px-4 py-1.5 text-[8px] md:text-[10px] md:text-xs 2xl:text-sm font-sans uppercase tracking-[0.2em] text-primary border border-primary/40 bg-primary/10 mb-5  font-semibold">
-          {title}
-        </div>}
-         <h1  className="font-display text-2xl md:text-3xl lg:text-7xl font-bold leading-[1.05]">
-       {heading}
+export function Hero({
+  title,
+  heading,
+  des,
+  btn1href,
+  btn1name,
+  btn2href,
+  btn2name,
+  className,
+  className1,
+}) {
+  return (
+    <div className={`${className} w-full`}>
+      <div className="flex flex-col items-center text-center">
+
+        {title && (
+          <div className="inline-flex items-center gap-2 rounded-full px-3 md:px-4 py-1.5 text-[8px] md:text-xs 2xl:text-sm font-sans uppercase tracking-[0.2em] text-primary border border-primary/40 bg-primary/10 mb-5 font-semibold">
+            {title}
+          </div>
+        )}
+
+        <h1 className="font-display text-2xl md:text-3xl lg:text-7xl font-bold leading-[1.05]">
+          {heading}
         </h1>
-                <p className="mt-6  text-sm md:text-base lg:text-xl  text-[#b1afb8]  leading-relaxed font-normal">
-                {des}
-                </p>
-               { btn1href && <div className={`mt-5 md:mt-10 flex flex-wrap items-center  gap-3 ${className1}`}>
-                       { btn1name &&  <PrimaryButton href={btn1href}>{btn1name}</PrimaryButton>}
-                        {btn2name &&  <GhostButton href={btn2href}>{btn2name}</GhostButton>}
-                        </div>}
+
+        <p className="mt-6 text-sm md:text-base lg:text-xl text-[#b1afb8] leading-relaxed font-normal max-w-4xl mx-auto">
+          {des}
+        </p>
+
+        {btn1href && (
+          <div
+            className={`mt-5 md:mt-10 flex flex-wrap justify-center items-center gap-3 ${className1}`}
+          >
+            {btn1name && (
+              <PrimaryButton href={btn1href}>
+                {btn1name}
+              </PrimaryButton>
+            )}
+
+            {btn2name && (
+              <GhostButton href={btn2href}>
+                {btn2name}
+              </GhostButton>
+            )}
+          </div>
+        )}
+
+      </div>
     </div>
-  </div>)
+  );
 }
 
 export function HeadSection({
@@ -185,8 +259,11 @@ export function HeadSection({
 
 export function TechSpecialization({techspecialization}){
   return( <div className="">
-<HeadSection name="Technical Specializations" des="Deep expertise across the entire intelligence stack." />
-<Reveal>
+<HeadSection
+  name="Technical Specializations"
+  des="Deep expertise across the entire intelligence stack."
+  className="flex flex-col items-center text-center mx-auto"
+/><Reveal>
 
   <div className="mt-10 grid grid-cols-3 md:grid-cols-4 xl:grid-cols-6 justify-center gap-5 items-stretch">
   {techspecialization?.map((tech, i) => (
@@ -215,7 +292,8 @@ const EngineerCard= ({
   onViewVetting,
 }) => {
   return (
-    <div className="flex flex-col justify-between h-full glass rounded-[8px] p-6 transition-all duration-300 hover:border-primary hover:shadow-lg hover:shadow-purple-950/10">
+    <div className="flex flex-col justify-between h-full glass hover-glow-card bg-[oklch(0.18_0.02_290_/_0.7)]
+  rounded-[8px] p-6 transition-all duration-300 hover:border-primary hover:shadow-lg hover:shadow-purple-950/10">
       <div>
         {/* Top Header Section */}
         <div className="flex items-center gap-4 mb-6">
@@ -269,17 +347,22 @@ const EngineerCard= ({
 };
 export function FeaturedEngineer(){
   return(<div className="">
-<HeadSection name="Featured Engineers" des="Available for immediate hire. Fully vetted technical leaders with a track record of
-shipping production AI models." className="     flex justify-center items-center  text-center max-w-2xl mx-auto" />
+<HeadSection
+  name="Featured Engineers"
+  des="Available for immediate hire. Fully vetted technical leaders with a track record of shipping production AI models."
+  className="flex flex-col items-center text-center mx-auto max-w-3xl "
+/>
 <div className="mt-10 w-full  flex items-center justify-center font-sans antialiased">
       <div className="max-w-7xl w-full mx-auto">
         {/* Responsive Grid Layout */}
         <Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-5 lg:gap-10 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-5 lg:gap-10 items-stretch ">
           {engineersData.map((engineer, idx) => (
             <EngineerCard
+            
             key={idx}
+            
             {...engineer}
             onViewVetting={() =>
               console.log(`Viewing vetting for ${engineer.name}`)
@@ -295,11 +378,16 @@ shipping production AI models." className="     flex justify-center items-center
 
 export function UseCases(){
   return(<div>
-    <HeadSection name="Use Cases We've Solved" des="Real-world AI deployment examples from our talent network."  />
+    <HeadSection
+  name="Use Cases We've Solved"
+  des="Real-world AI deployment examples from our talent network."
+  className="flex flex-col items-center text-center mx-auto max-w-3xl"
+/>
         <Reveal>
     <div className=" mt-10 w-full  grid grid-cols-1 lg:grid-cols-12 gap-5">
         {/* ================= CARD 1: Enterprise AI Chatbots (Large Top Left) ================= */}
-        <div className="lg:col-span-8 bg-[#111015] border border-primary/10 rounded-2xl p-7 sm:p-8 relative overflow-hidden flex flex-col justify-between group hover:border-primary transition-all duration-300">
+        <div className="lg:col-span-8 hover-glow-card bg-[oklch(0.18_0.02_290_/_0.7)]
+  border border-primary/10 rounded-2xl p-7 sm:p-8 relative overflow-hidden flex flex-col justify-between group hover:border-primary transition-all duration-300">
           
           {/* Subtle Watermark Icon in background */}
           <div className="absolute -bottom-4 -right-6 opacity-50 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none text-primary">
@@ -331,7 +419,8 @@ export function UseCases(){
         </div>
 
        {/* ================= CARD 2: Automated Quality Control (Top Right) ================= */}
-<div className="lg:col-span-4 bg-[#111015] border border-primary/10 rounded-2xl p-7 sm:p-8 flex flex-col justify-between group hover:border-primary transition-all duration-300">
+<div className="lg:col-span-4 hover-glow-card bg-[oklch(0.18_0.02_290_/_0.7)]
+  border border-primary/10 rounded-2xl p-7 sm:p-8 flex flex-col justify-between group hover:border-primary transition-all duration-300">
   <div>
     {/* Title */}
     <h3 className="text-lg sm:text-xl font-medium text-white tracking-tight">
@@ -346,10 +435,10 @@ export function UseCases(){
 
   {/* Progress / Metric Bar with Scroll Animation */}
   <div className="mt-8 sm:mt-10">
-    <div className="w-full bg-[#1F1C28] h-2 rounded-full overflow-hidden">
+    <div className="w-full  h-2 rounded-full overflow-hidden">
       {/* 🚀 Framer Motion Progress Bar Animation */}
       <motion.div
-        className="bg-primary h-full rounded-full"
+        className="bg-primary h-full rounded-full "
         initial={{ width: "0%" }}
         whileInView={{ width: "90.4%" }}
         viewport={{ once: true, amount: 0.5 }} // screen me 50% aane pr animation start hoga aur ek hi baar chalega
@@ -364,7 +453,8 @@ export function UseCases(){
 </div>
 
         {/* ================= CARD 3: Predictive Logistics (Bottom Left) ================= */}
-        <div className="lg:col-span-4 bg-[#111015] border border-primary/10 rounded-2xl p-7 sm:p-8 relative overflow-hidden flex flex-col justify-center group hover:border-primary transition-all duration-300">
+        <div className="lg:col-span-4 hover-glow-card bg-[oklch(0.18_0.02_290_/_0.7)]
+  border border-primary/10 rounded-2xl p-7 sm:p-8 relative overflow-hidden flex flex-col justify-center group hover:border-primary transition-all duration-300">
           {/* Purple Accent Bar on Left Border */}
           <div className="absolute left-0 top-0 bottom-0 w-1 bg-primary rounded-l-2xl" />
 
@@ -382,7 +472,8 @@ export function UseCases(){
         </div>
 
         {/* ================= CARD 4: Generative Design Assets (Bottom Right) ================= */}
-        <div className="lg:col-span-8 bg-[#111015] border border-primary/10 rounded-2xl p-7 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 group hover:border-primary transition-all duration-300">
+        <div className="lg:col-span-8 hover-glow-card bg-[oklch(0.18_0.02_290_/_0.7)]
+  border border-primary/10 rounded-2xl p-7 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 group hover:border-primary transition-all duration-300">
           <div className="max-w-md">
             {/* Title */}
             <h3 className="text-lg sm:text-xl font-medium text-white tracking-tight">

@@ -194,6 +194,7 @@ export function Hero({
   btn2name,
   className,
   className1,
+  headingClassName, // Add this
 }) {
   return (
     <div className={`${className} w-full`}>
@@ -205,36 +206,19 @@ export function Hero({
           </div>
         )}
 
-        <h1 className="font-display text-2xl md:text-3xl lg:text-7xl font-bold leading-[1.05]">
-          {heading}
-        </h1>
+      <h1 className="font-display font-bold leading-[0.95] text-2xl md:text-[clamp(2.75rem,8vw,7.5rem)] 2xl:text-[clamp(3rem,9vw,8.5rem)]">
+  {heading}
+</h1>
 
         <p className="mt-6 text-sm md:text-base lg:text-xl text-[#b1afb8] leading-relaxed font-normal max-w-4xl mx-auto">
           {des}
         </p>
 
-        {btn1href && (
-          <div
-            className={`mt-5 md:mt-10 flex flex-wrap justify-center items-center gap-3 ${className1}`}
-          >
-            {btn1name && (
-              <PrimaryButton href={btn1href}>
-                {btn1name}
-              </PrimaryButton>
-            )}
-
-            {btn2name && (
-              <GhostButton href={btn2href}>
-                {btn2name}
-              </GhostButton>
-            )}
-          </div>
-        )}
-
+        {/* Rest of the code */}
       </div>
     </div>
   );
-}
+} 
 
 export function HeadSection({
   name,

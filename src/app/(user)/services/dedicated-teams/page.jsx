@@ -166,9 +166,10 @@ export default function Page() {
       <Hero
         heading={
           <>
+          
             {" "}
             Dedicated{" "}
-            <span className="text-gradient-purple">Expert Teams </span>
+            <span className="text-gradient-purple ">Expert Teams </span>
           </>
         }
         des={

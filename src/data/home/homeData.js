@@ -20,12 +20,7 @@ export const  homeData = {
  experts : [
 
 
-  {
-    name: "Mayank Y.",
-    role: "Angular developer",
-    img: "/assets/mayanky.png",
-    accent: "oklch(0.65 0.28 320)",
-  },
+ 
   
 
 
@@ -48,7 +43,24 @@ export const  homeData = {
   img: "/assets/Pawan.png",
   accent: "oklch(0.65 0.28 320)",
 },
-
+ {
+    name: "Mayank Y.",
+    role: "Angular developer",
+    img: "/assets/Mayanks.png",
+    accent: "oklch(0.65 0.28 320)",
+  },
+ {
+    name: "Neha R.",
+    role: "wordpress developer",
+    img: "/assets/neha.png",
+    accent: "oklch(0.65 0.28 320)",
+  },
+  {
+    name: "Akansha S.",
+    role: "ui/ux designer",
+    img: "/assets/Aakansha.png",
+    accent: "oklch(0.65 0.28 320)",
+  },
   {
   name: "Mayank S.",
   role: "Full Stack Developer",
@@ -75,17 +87,12 @@ export const  homeData = {
     accent: "oklch(0.65 0.28 320)",
   },
 
-  {
-    name: "Neha R.",
-    role: "wordpress developer",
-    img: "/assets/neha.png",
-    accent: "oklch(0.65 0.28 320)",
-  },
+ 
  
   {
     name: "Dev P.",
     role: "Flutter Developer",
-    img: "/assets/dev.png",
+    img: "/assets/dev1.png",
     accent: "oklch(0.65 0.28 320)",
   },
   // {

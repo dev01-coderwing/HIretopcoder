@@ -13,7 +13,8 @@ export default function Page() {
   eyebrow="Delivery Model"
   title={<>IT <span className="text-gradient-purple">Staff Augmentation</span></>}
   sub={<>Plug vetted engineers directly into your existing team...</>}
-titleClassName="text-[clamp(2.2rem,6vw,5.5rem)] md:text-[clamp(2.5rem,6vw,6rem)] 2xl:text-[clamp(2.8rem,7vw,6.5rem)]"  notpt="notpt"
+titleClassName="font-display font-bold leading-[0.95]  md:text-[clamp(2.75rem,8vw,7.5rem)] 2xl:text-[clamp(3rem,9vw,8.5rem)]
+ "  notpt="notpt"
 />
       <Section  className="   ">
         <SectionTitle eyebrow="When To Use" title="The right scenarios" />

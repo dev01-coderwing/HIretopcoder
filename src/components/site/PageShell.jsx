@@ -52,7 +52,8 @@ export function GhostButton({ href = "/", children, className = "", ...rest }) {
   );
 }
 
-export function SectionHead({ eyebrow, title, sub }) {
+export function SectionHead({ eyebrow, title, sub ,   titleClassName = "",
+}) {
   return (
     <div className="text-center max-w-2xl mx-auto">
       <motion.div

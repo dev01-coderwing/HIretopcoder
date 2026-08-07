@@ -62,7 +62,7 @@ export default function Page() {
               <input type="number" value={hours} onChange={(e) => setHours(+e.target.value || 0)} className=" md:mt-2 w-full bg-black/40 border border-white/[0.08] rounded-[8px] p-1.5 md:px-3 md:py-2 text-white text-sm md:text-base outline-none focus:border-primary/40" />
             </div>
           </div>
-          <div className="mt-6  border-t border-white/[0.07] flex items-end justify-between">
+          <div className="mt-6   flex items-end justify-between">
             <div>
               <div className=" mt-1 text-[9px] md:text-[11px] uppercase tracking-[0.2em] text-primary font-bold">Estimated monthly</div>
               <div className="md:mt-1 text-2xl md:text-4xl font-extrabold text-white">${monthly.toLocaleString()}</div>
@@ -80,7 +80,7 @@ export default function Page() {
             { t: "LATAM is fastest growing", d: "Demand from US clients up 60% since 2024." },
           ].map((c) => <Card key={c.t}><div className="text-white  font-medium text-sm md:text-base md:mb-2">{c.t}</div><div className="text-foreground/60 text-xs md:text-sm">{c.d}</div></Card>)}
         </div>
-        <div className="text-center mt-5 md:mt-10"><button className="bg-white text-black font-bold text-xs md:text-base px-4 py-2 md:px-6 md:py-3 rounded-full">Get Full Report</button></div>
+        <div className="text-center mt-5 md:mt-10"><button className="bg-white text-black font-bold mt-5 text-xs md:text-base px-4 py-2 md:px-6 md:py-3 rounded-full">Get Full Report</button></div>
       </Section>
       <CTABanner />
     </   main >

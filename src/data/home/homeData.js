@@ -19,36 +19,21 @@ const port3image="/assets/case-studies/micromitti/img1.png";
 export const  homeData = {
  experts : [
 
-  {
-    name: "Rahul J.",
-    role: "ux designer",
-    img: "/assets/rahul2.png",
-    accent: "oklch(0.65 0.28 320)",
-  },
+
   {
     name: "Mayank Y.",
     role: "Angular developer",
     img: "/assets/mayanky.png",
     accent: "oklch(0.65 0.28 320)",
   },
-  {
-    name: "Khushi G.",
-    role: "Wordpress developer",
-    img: "/assets/khushi.png",
-    accent: "oklch(0.65 0.28 320)",
-  },
+  
 
-  {
-    name: "Aarif K.",
-    role: "Ract js trainee",
-    img: "/assets/aarif2.jpeg",
-    accent: "oklch(0.65 0.28 320)",
-  },
+
 
   {
     name: "Arun S.",
     role: "Team Head",
-    img: "/assets/arun.png",
+    img: "/assets/Arunsir.png",
     accent: "oklch(0.65 0.28 320)",
   },
   {
@@ -57,6 +42,32 @@ export const  homeData = {
     img: "/assets/kajal.png",
     accent: "oklch(0.65 0.28 320)",
   },
+  {
+  name: "Pawan M.",
+  role: "Full Stack Developer",
+  img: "/assets/Pawan.png",
+  accent: "oklch(0.65 0.28 320)",
+},
+
+  {
+  name: "Mayank S.",
+  role: "Full Stack Developer",
+  img: "/assets/Mayank.png",
+  accent: "oklch(0.65 0.28 320)",
+},
+{
+  name: "Shruti G.",
+  role: "UI/UX Designer",
+  img: "/assets/Shruti.png",
+  accent: "oklch(0.65 0.28 320)",
+},
+
+{
+  name: "Shivam K.",
+  role: "Flutter Developer",
+  img: "/assets/Shivam.png",
+  accent: "oklch(0.65 0.28 320)",
+},
   {
     name: "Akansha S.",
     role: "ui/ux designer",
@@ -70,15 +81,10 @@ export const  homeData = {
     img: "/assets/neha.png",
     accent: "oklch(0.65 0.28 320)",
   },
-  {
-    name: "Sumit V.",
-    role: "Business Development Executive",
-    img: "/assets/sumit.png",
-    accent: "oklch(0.65 0.28 320)",
-  },
+ 
   {
     name: "Dev P.",
-    role: "Flutter Trainee",
+    role: "Flutter Developer",
     img: "/assets/dev.png",
     accent: "oklch(0.65 0.28 320)",
   },

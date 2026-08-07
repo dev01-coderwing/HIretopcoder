@@ -203,7 +203,7 @@ export function Card({
   return (
     <Reveal>
       <div
-        className={` bg-gradient-to-t from-black/80 to-transparent rounded-[16px] border border-[oklch(0.62_0.26_305/0.15)] hover-glow-card p-3 md:p-6 mt-5 md:mt-10 ${className}`}
+      className={`h-full flex flex-col bg-gradient-to-t from-black/80 to-transparent rounded-[16px] border border-[oklch(0.62_0.26_305/0.15)] hover-glow-card p-3 md:p-6 mt-5 md:mt-10 ${className}`}
       >
         {children}
       </div>

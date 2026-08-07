@@ -67,7 +67,6 @@ export default function HirePage() {
       {/* HERO */}
  <section className="relative pt-40 pb-24 px-4 sm:px-6 lg:px-15 1xl:px-20 2xl:px-25 overflow-hidden flex items-center justify-center min-h-[80vh]">
   <AmbientGlow />
-  {/* यहाँ text-center, max-w, और mx-auto को ऐड किया गया है ताकि सब कुछ सटीक रूप से सेंटर अलाइन हो सके */}
   <div className="relative w-full max-w-4xl mx-auto flex flex-col items-center justify-center text-center">
     
     <Reveal>
@@ -76,12 +75,14 @@ export default function HirePage() {
       </div>
     </Reveal>
 
-    <h1 className="text-5xl md:text-7xl font-extrabold leading-[1.02] tracking-tight w-full">
+    <h1 className="font-display font-bold leading-[0.95]  md:text-[clamp(2.75rem,8vw,7.5rem)] 2xl:text-[clamp(3rem,9vw,8.5rem)]
+   tracking-tight w-full">
       <WordReveal text="Hire Elite Digital" />
       <br />
       <span className="text-gradient-purple">
         <WordReveal text="Experts On Demand" />
       </span>
+      
     </h1>
 
     <Reveal delay={0.3}>

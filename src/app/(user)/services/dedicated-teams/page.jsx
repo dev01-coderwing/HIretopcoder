@@ -407,7 +407,7 @@ export function WorkCard({ steps }) {
 
               {/* Horizontal Connecting Line (hidden on last item & mobile) */}
               {!isLast && (
-                <div className="hidden lg:block h-[1px] w-10 flex-1 bg-white/50 ml-2" />
+                <div className="hidden lg:block h-[1px] w-10 flex-1 bg-[#A855F7] ml-2" />
               )}
             </div>
 

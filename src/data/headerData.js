@@ -171,9 +171,9 @@ export const headerData={
       cards: [
         {
           tag: "CASE STUDY",
-          title: "Mirco Mitti-Real Estate Investment Platform",
+          title: "Micro Mitti-Real Estate Investment Platform",
           meta: <>Flutter - Firebase <span className="text-primary">•</span>6 weeks</>,
-          href: "/case-studies/mircromitti",
+          href: "/case-studies/micro-mitti",
         },
         {
           tag: "GUIDE 2025",

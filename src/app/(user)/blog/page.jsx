@@ -60,10 +60,7 @@ const posts = [
     read: "7 min",
      to:"/blog/ai-product"
   },
-  {cat: "Engineering",    title: "Shipping faster with small pods",    excerpt: "Why six-person teams outperform.",               img: blog6, read: "6 min" ,to:"/blog/shipping-faster"},
-  {cat: "Branding",       title: "The new luxury of restraint",        excerpt: "Less is louder than ever.",                       img: blog8, read: "5 min" ,to:"/blog/branding"},
-  {cat: "Startups",       title: "Hiring your first 10 with intention", excerpt: "Compounding the culture you want.",              img: blog7, read: "9 min",to:"/blog/hiring-intention" },
-  {cat: "Automation",     title: "From prompts to pipelines",          excerpt: "Operationalizing AI inside the org.",            img: blog5, read: "7 min" ,to:"/blog/prompt-to-pipelines"},
+  
 ];
 
 const guides = [
@@ -155,10 +152,10 @@ export default function BlogPage() {
 
       {/* CATEGORIES */}
       <section className="relative ">
-        <Stagger className="w-full   flex flex-wrap justify-center gap-2">
+        <Stagger className="w-full   flex flex-wrap justify-center gap-2 mb-5 ">
           {categories.map((c) => (
             <StaggerItem key={c}>
-              <button className="glass rounded-full px-5 py-2 text-xs md:text-sm font-semibold  border border-white/10  bg-primary/10 transition-colors hover:border-primary  text-[#F0EDFF]  ">
+              <button className="glass rounded-full px-5 py-2 text-xs md:text-sm font-semibold hover-glow-card bg-[oklch(0.18_0.02_290_/_0.7)]  border border-white/10  bg-primary/10 transition-colors  text-[#F0EDFF]  ">
                 {c}
               </button>
             </StaggerItem>
@@ -174,6 +171,7 @@ export default function BlogPage() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[700px] rounded-full bg-primary/10 blur-[160px] pointer-events-none" />
             <Reveal> <div className="relative w-full">
             <SectionHead
+
               eyebrow="Insights & innovation"
               title={
                 <>
@@ -181,6 +179,7 @@ export default function BlogPage() {
                   <span className="text-gradient-purple">digital innovation.</span>
                 </>
               }
+               titleClassName="font-display font-bold leading-[0.95] md:text-[clamp(2.75rem,8vw,7.5rem)] 2xl:text-[clamp(3rem,9vw,8.5rem)]"
               sub="Explore the latest thoughts on design, AI, branding, product development and modern digital experiences."
             />
          

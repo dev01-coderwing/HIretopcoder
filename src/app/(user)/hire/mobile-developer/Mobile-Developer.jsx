@@ -75,8 +75,25 @@ export default function MobileDeveloperPage() {
   return(  <section className="w-full pt-30 md:pt-48 px-4 sm:px-6 lg:px-15 1xl:px-20 2xl:px-25">
       <div className="">
   
-   <Hero title="Hire by Role" heading={<> Hire <span className="text-gradient-purple">Mobile Developers</span>
-            </>} des={<>Flutter, React Native, native iOS and Android — pick the  right <br className="hidden md:block" /> platform for your product.</>}  className=" flex justify-center items-center  text-center  mx-auto" />
+<Hero
+  title="Hire by Role"
+  heading={
+    <span className="font-display font-bold leading-[0.95] text-[clamp(2.2rem,6vw,5.5rem)] md:text-[clamp(2.5rem,6vw,6rem)] 2xl:text-[clamp(2.8rem,7vw,6.5rem)]">
+      Hire{" "}
+      <span className="text-gradient-purple">
+        Mobile Developers
+      </span>
+    </span>
+  }
+  des={
+    <>
+      Flutter, React Native, native iOS and Android — pick the right{" "}
+      <br className="hidden md:block" />
+      platform for your product.
+    </>
+  }
+  className="flex justify-center items-center text-center mx-auto"
+/>
   <div className="mt-5 flex flex-wrap justify-center items-center gap-1 md:gap-3 max-w-3xl mx-auto">
     {stacks?.map((tech, i) => (
       <Reveal key={i} className="last:col-start-2">

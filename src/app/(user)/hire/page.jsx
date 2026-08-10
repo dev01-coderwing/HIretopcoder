@@ -75,7 +75,7 @@ export default function HirePage() {
       </div>
     </Reveal>
 
-    <h1 className="font-display font-bold leading-[0.95]  md:text-[clamp(2.75rem,8vw,7.5rem)] 2xl:text-[clamp(3rem,9vw,8.5rem)]
+    <h1 className="font-display font-bold leading-[0.95]  text-[clamp(2.2rem,6vw,5.5rem)] md:text-[clamp(2.5rem,6vw,6rem)] 2xl:text-[clamp(2.8rem,7vw,6.5rem)]
    tracking-tight w-full">
       <WordReveal text="Hire Elite Digital" />
       <br />
@@ -93,14 +93,13 @@ export default function HirePage() {
     </Reveal>
 
     <Reveal delay={0.45}>
-      {/* max-w-xl से सर्च बार की विड्थ (Width) एकदम परफेक्ट और सेंटर में दिखेगी */}
       <div className="mt-10 w-full  glass rounded-full p-2 pl-5 flex items-center gap-2 ring-purple">
         <Search className="size-5 text-foreground/60 shrink-0" />
         <input
           placeholder="Try ‘senior product designer for fintech SaaS’"
           className="flex-1 bg-transparent outline-none text-sm py-3 placeholder:text-foreground/45"
         />
-        <button className="btn-primary-glow text-white font-bold rounded-full px-6 py-3 text-xs md:text-sm 1xl:text-base whitespace-nowrap">
+        <button className=" bg-white text-black font-bold rounded-full px-6 py-3 text-xs md:text-sm 1xl:text-base whitespace-nowrap">
           Match me
         </button>
       </div>

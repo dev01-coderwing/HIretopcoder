@@ -192,12 +192,27 @@ export default function FullStackDeveloperPage() {
   <section className="w-full pt-30 md:pt-48 px-4 sm:px-6 lg:px-15 1xl:px-20 2xl:px-25">
     <div className="">
 
- <Hero title="ENGINEERING EXCELLENCE" heading={<> Hire 
-
-<span className="text-gradient-purple"> Full-Stack Developers </span><br/>
-Who Scale Your Vision 
-          </>} des={<> Access the top 1% of full-stack talent. Vetted for architectural precision, code <br />
-cleanliness, and rapid delivery across modern stacks.</>}  className=" flex justify-center items-center  text-center  mx-auto" />
+ <Hero
+  title="ENGINEERING EXCELLENCE"
+  heading={
+    <span className="font-display font-bold leading-[0.95] text-[clamp(2.2rem,6vw,5.5rem)] md:text-[clamp(2.5rem,6vw,6rem)] 2xl:text-[clamp(2.8rem,7vw,6.5rem)]">
+      Hire{" "}
+      <span className="text-gradient-purple">
+        Full-Stack Developers
+      </span>
+      <br />
+      Who Scale Your Vision
+    </span>
+  }
+  des={
+    <>
+      Access the top 1% of full-stack talent. Vetted for architectural precision,
+      code <br />
+      cleanliness, and rapid delivery across modern stacks.
+    </>
+  }
+  className="flex justify-center items-center text-center mx-auto"
+/>
 <div className="mt-5 flex flex-wrap justify-center items-center gap-1 md:gap-3 max-w-3xl mx-auto">
   {stacks?.map((tech, i) => (
     <Reveal key={i} className="last:col-start-2">
@@ -265,7 +280,7 @@ export function EngineersCard({filteredEngineers}){
   return(<> {filteredEngineers.map((e, i) => (
           <div
             key={i}
-            className="hover-glow-card bg-[oklch(0.18_0.02_290_/_0.7)] border border-primary/10 hover:border-primary p-6 rounded transition-all duration-300"
+            className="hover-glow-card bg-[oklch(0.18_0.02_290_/_0.7)] border border-primary/10 hover:border-primary p-6 rounded transition-all duration-300 rounded-2xl"
           >
             <div className="flex justify-between items-start mb-6">
               <div className="relative">
@@ -314,7 +329,7 @@ export function SeniorFilter({engineers,filters}){
     (engineer) => engineer.role === activeFilter
   );
   
-  return (<div className="bg-[#0a0a0a] text-white p-8 font-sans w-full">
+  return (<div className="bg-[#0a0a0a] text-white p-8 font-sans w-full rounded-xl">
       {/* Header & Filter Bar */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12   py-5">
         <div className="flex items-center gap-3 text-xl font-medium">
@@ -323,7 +338,7 @@ export function SeniorFilter({engineers,filters}){
         </div>
 
         {/* Dynamic Clickable Filter Buttons */}
-        <div className="flex p-1 rounded-sm  w-fit">
+        <div className="flex p-1 rounded-sm  w-fit rounded-2xl">
           {filters.map((f) => {
             const isActive = activeFilter === f.label;
             return (
@@ -371,7 +386,7 @@ return (<div className="  mt-15 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 g
             return (
               <div
                 key={index}
-                className=" hover-glow-card bg-[oklch(0.18_0.02_290_/_0.7)] p-8 sm:p-9 lg:p-10  border border-primary/50 hover:border-primary  flex flex-col justify-start  group hover:bg-white/[0.02] rounded transition-colors duration-300"
+                className=" hover-glow-card bg-[oklch(0.18_0.02_290_/_0.7)] rounded-2xl p-8 sm:p-9 lg:p-10  border border-primary/50 hover:border-primary  flex flex-col justify-start  group hover:bg-white/[0.02] rounded transition-colors duration-300"
               >
                 {/* Icon Section */}
                 <div className="mb-5">
@@ -397,7 +412,7 @@ return (<div className="  mt-15 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 g
 }
 
 export function CapabiliyTable({tableData,tableHeadData}){
-  return(<div className="mt-15 w-full mx-auto overflow-hidden rounded hover-glow-card bg-[oklch(0.18_0.02_290_/_0.7)]
+  return(<div className="mt-15 w-full mx-auto overflow-hidden rounded-xl hover-glow-card bg-[oklch(0.18_0.02_290_/_0.7)]
   shadow-2xl bg-[#0B090E]">
         {/* Table Container for horizontal scrolling on smaller screens */}
         <div className="overflow-x-auto">

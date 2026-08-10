@@ -33,13 +33,19 @@ export default function FAQPage() {
   const items = groups[cat].filter((i) => i.q.toLowerCase().includes(query.toLowerCase()));
   return (
    <main className="pt-20 md:pt-28  w-full"    >
-      <PageHero className="font-display font-bold leading-[0.95]  md:text-[clamp(2.75rem,8vw,7.5rem)] 2xl:text-[clamp(3rem,9vw,8.5rem)]
- " eyebrow="Help Centre" title={<>Frequently Asked <span className="text-primary">Questions</span></>} sub="Answers to what teams ask before, during, and after they hire with us.">
-        <div className="max-w-xl mx-auto flex items-center gap-2 rounded-full bg-[#141418] border border-white/[0.08] p-2 md:px-4 md:py-2">
-          <Search className="size-3 md:size-4 text-foreground/40" />
-          <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search questions…" className="bg-transparent flex-1 outline-none text-xs md:text-sm text-white placeholder:text-foreground/30" />
-        </div>
-      </PageHero>
+<PageHero
+  eyebrow="Help Centre"
+  title={
+    <>
+      Frequently Asked{" "}
+      <span className="text-primary">Questions</span>
+    </>
+  }
+  sub="Answers to what teams ask before, during, and after they hire with us."
+  titleClassName="font-display font-bold leading-[0.95] text-[clamp(2.2rem,6vw,5.5rem)] md:text-[clamp(2.5rem,6vw,6rem)] 2xl:text-[clamp(2.8rem,7vw,6.5rem)]"
+/>
+
+
       <Section className="  ">
         <div className="flex flex-wrap justify-center md:gap-2 mb-5 md:mb-10">
           {(Object.keys(groups)).map((c) => (

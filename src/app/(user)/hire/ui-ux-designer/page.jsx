@@ -157,12 +157,27 @@ export default function Page() {
 <section className="w-full pt-30 md:pt-48 px-4 sm:px-6 lg:px-15 1xl:px-20 2xl:px-25">
     <div className="">
 
- <Hero title="PREMIUM TALENT NETWORK " heading={<> Hire Vetted 
-
-<span className="text-gradient-purple text-[clamp(2.2rem,6vw,5.5rem)] md:text-[clamp(2.5rem,6vw,6rem)] 2xl:text-[clamp(2.8rem,7vw,6.5rem)]"> UI/UX Designers </span>
-
-          </>} des={<>Access the top 1% of design talent. Our designers specialize in creating high- <br/>
-conversion, technically sophisticated interfaces for global scale products.</>}  className=" flex justify-center items-center  text-center  mx-auto" />
+<Hero
+  title="PREMIUM TALENT NETWORK"
+  heading={
+    <span className="text-[clamp(2.2rem,6vw,5.5rem)] md:text-[clamp(2.5rem,6vw,6rem)] 2xl:text-[clamp(2.8rem,7vw,6.5rem)]">
+      Hire Vetted{" "}
+      <span className="text-gradient-purple">
+        UI/UX Designers
+      </span>
+    </span>
+  }
+  des={
+    <>
+      Access the top 1% of design talent. Our designers specialize in creating
+      high-
+      <br />
+      conversion, technically sophisticated interfaces for global scale
+      products.
+    </>
+  }
+  className="flex justify-center items-center text-center mx-auto"
+/>
 <div className="mt-5 bg-[#100F15] border border-primary/20 rounded-2xl p-1 flex flex-col md:flex-row items-center gap-3 md:gap-0 shadow-2xl  max-w-3xl mx-auto">
           
           {/* Section 1: Text Search Input */}
@@ -223,7 +238,7 @@ conversion, technically sophisticated interfaces for global scale products.</>} 
           <div className="w-full md:w-auto shrink-0 md:pl-2">
             <button
               type="button"
-              className="w-full md:w-auto px-7 py-3 sm:py-3.5 bg-primary text-[#1D063A] font-semibold text-sm sm:text-base rounded-2xl transition-all duration-200 active:scale-[0.98] cursor-pointer shadow-lg shadow-purple-950/40"
+              className="w-full md:w-auto px-7 py-3 sm:py-3.5 bg-white text-[#1D063A] font-semibold text-sm sm:text-base rounded-2xl transition-all duration-200 active:scale-[0.98] cursor-pointer shadow-lg shadow-purple-950/40"
             >
               Find Talent
             </button>

@@ -7,6 +7,7 @@ import { AiOutlineSend } from "react-icons/ai";
 import { FaMapMarkerAlt, FaPhoneAlt, FaRegEnvelope } from "react-icons/fa";
 import { FiCheck } from 'react-icons/fi';
 import { GhostButton } from "./PageShell.jsx";
+import { FaClock } from "react-icons/fa";
 
 
 const { services, hireRoles, companyLinks, stats, socials, resourceLinks } = footerData;
@@ -45,7 +46,6 @@ export  function Footer() {
                  
                   className="group flex items-center gap-2 md:gap-5 py-2 w-full text-left transition-all duration-300 rounded-[6px] md:rounded-[12px] hover:bg-white/[0.01] focus:outline-none"
                 >
-                  {/* Outer Frame (इमेज `image (4).png` के बॉक्स साइज को बनाए रखने के लिए) */}
                 
                     {/* Inner Custom Checkbox Square */}
                     <div className={`w-7 h-7 md:w-9 md:h-9 rounded-[4px] border flex items-center justify-center transition-all duration-200 
@@ -133,7 +133,6 @@ weekly.
           {/* Brand */}
 <div className=" -mb-5 md:-mb-0  w-full xl:col-span-4">
 <Link href="/" className="block">
-  {/* लोगो को दबने से बचाने के लिए wrapper div */}
   <div className="relative w-[140px] h-[45px] sm:w-[160px] sm:h-[50px] md:w-[180px] md:h-[55px] lg:w-[200px] lg:h-[60px]">
     <Image 
       src={logo} 
@@ -215,10 +214,16 @@ weekly.
 <li className="flex items-start gap-1 md:gap-2"><FaPhoneAlt className="size-3 md:size-4 mt-0.5 text-white/35 shrink-0" /><span>+91 98765 43210</span></li>
 </ul>
 <div className="mt-5">
-<div className=" text-[10px] md:text-[11px] text-white/35 uppercase tracking-wider">Response time</div>
-<div className="text-xs md:text-[13px] text-white font-medium mt-0.5">&lt; 2 hours</div>
+  <div className="text-[10px] md:text-[11px] text-white/35 uppercase tracking-wider">
+    Response Time
+  </div>
+
+  <div className="mt-2 flex items-center gap-2 text-sm font-medium text-white">
+    <FaClock className="text-primary" />
+    <span>Under 2 Hours</span>
+  </div>
 </div>
-<GhostButton href="contact" className=" mt-1 md:mt-5 ">
+<GhostButton href="contact" className="btn-glass inline-flex items-center justify-center whitespace-nowrap min-w-[170px] h-14 px-8 rounded-full text-lg font-bold">
 
               Book a Call 
 </GhostButton>

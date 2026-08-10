@@ -64,7 +64,7 @@ export default function TermsPage() {
             </div>
           </Reveal>
           <Reveal delay={0.1}>
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white">
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white text-[clamp(2.2rem,6vw,5.5rem)] md:text-[clamp(2.5rem,6vw,6rem)] 2xl:text-[clamp(2.8rem,7vw,6.5rem)]">
               Terms of Service
             </h1>
           </Reveal>
@@ -73,14 +73,15 @@ export default function TermsPage() {
               Last updated: June 2025
             </p>
           </Reveal>
-          <div className="mt-8 border-b border-white/10" />
+          {/* <div className="mt-8 border-b border-white/10" /> */}
         </div>
 
         {/* Content Cards */}
         <div className="mx-auto max-w-[720px] pb-[100px] space-y-6">
           {sections.map((s, i) => (
             <Reveal key={s.title} delay={i * 0.05}>
-              <div className="bg-[#0d0d0d] border border-primary/50 hover:border-primary rounded-xl p-8">
+              <div className="hover-glow-card bg-[oklch(0.18_0.02_290_/_0.7)]
+  border border-primary/50 hover:border-primary rounded-xl p-8">
                 <h2 className="text-base font-medium text-white mb-3">
                   {s.title}
                 </h2>

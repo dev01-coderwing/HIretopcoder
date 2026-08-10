@@ -27,25 +27,25 @@ export default function Page() {
           ]}
         />
       </div>
-      <PageHero
-        eyebrow="GCC Model"
-        title={
-          <>
-            Offshore{" "}
-            <span className="text-primary font-display font-bold leading-[0.95] text-[clamp(2.6rem,8vw,7rem)] md:text-[clamp(2.75rem,8vw,7.5rem)] 2xl:text-[clamp(3rem,9vw,8.5rem)]">
-              Development Centre
-            </span>
-          </>
-        }
-        sub={
-          <>
-            Set up your own Global Capability Centre in 90 days — talent,
-            compliance <br /> infrastructure, and management, all run by us.
-          </>
-        }
-        titleClassName="text-[clamp(2.2rem,6vw,5.5rem)] md:text-[clamp(2.5rem,6vw,6rem)] 2xl:text-[clamp(2.8rem,7vw,6.5rem)]"
-        notpt="notpt"
-      />
+     <PageHero
+  eyebrow="GCC Model"
+  title={
+    <>
+      Offshore{" "}
+      <span className="text-primary font-display font-bold leading-[0.95]">
+        Development Centre
+      </span>
+    </>
+  }
+  sub={
+    <>
+      Set up your own Global Capability Centre in 90 days — talent,
+      compliance <br /> infrastructure, and management, all run by us.
+    </>
+  }
+  titleClassName="text-[clamp(2.2rem,6vw,5.5rem)] md:text-[clamp(2.5rem,6vw,6rem)] 2xl:text-[clamp(2.8rem,7vw,6.5rem)]"
+  notpt="notpt"
+/>
       <Section className="   ">
         <SectionTitle eyebrow="Model" title="The GCC Model Explained" />
         <div className="grid md:grid-cols-4 gap-5">

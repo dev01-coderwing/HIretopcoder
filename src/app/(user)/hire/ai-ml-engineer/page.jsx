@@ -125,28 +125,30 @@ export default function Page() {
   <div className="w-full max-w-7xl flex flex-col items-center">
 
     <Hero
-      title="elight talent network"
-      heading={
-        <>
-          Hire <span className="text-gradient-purple">AI/Ml Engineers </span>
-          
-          & LLM Specialist
-        </>
-      }
-      des={
-        <>
-          Deploy production-ready artificial intelligence. From Large Language Models
-          <br />
-          to Computer Vision, we source the top 1% of technical talent to scale your
-          <br />
-          intelligent infrastructure.
-        </>
-      }
-      btn1name="Shedule Technical Discovery"
-      btn1href="/"
-      btn2name="Browse Talent"
-      btn2href="/"
-    />
+  title="elight talent network"
+  heading={
+    <span className="font-display font-bold leading-[0.95] text-[clamp(2.2rem,6vw,5.5rem)] md:text-[clamp(2.5rem,6vw,6rem)] 2xl:text-[clamp(2.8rem,7vw,6.5rem)]">
+      Hire AI/ML Engineers{" "}
+      <span className="text-gradient-purple">
+        & LLM Specialist
+      </span>
+    </span>
+  }
+  des={
+    <>
+      Deploy production-ready artificial intelligence. From Large Language
+      Models
+      <br />
+      to Computer Vision, we source the top 1% of technical talent to scale your
+      <br />
+      intelligent infrastructure.
+    </>
+  }
+  btn1name="Schedule Technical Discovery"
+  btn1href="/"
+  btn2name="Browse Talent"
+  btn2href="/"
+/>
 
     <div className="w-full pt-10 pb-20 lg:mt-25 flex flex-col items-center gap-15 lg:gap-30">
 
@@ -495,7 +497,8 @@ export function FAQ({faqData}){
   const toggleFaq = (id) => {
     setOpenId(openId === id ? null : id);
   };
-  return (<div><HeadSection name="Frequently Asked Questions"  className=" flex justify-center items-center  text-center " />
+  return (<div>
+    <HeadSection name="Frequently Asked Questions"  className=" flex justify-center items-center  text-center  " />
   
   <div className="mt-10 max-w-4xl w-full mx-auto space-y-4">
         {faqData.map((item) => {

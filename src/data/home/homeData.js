@@ -44,9 +44,21 @@ export const  homeData = {
   accent: "oklch(0.65 0.28 320)",
 },
  {
+  name: "Subhash S.",
+  role: "Flutter Developer",
+  img: "/assets/Subhash.png",
+  accent: "oklch(0.65 0.28 320)",
+},
+ {
     name: "Mayank Y.",
     role: "Angular developer",
     img: "/assets/Mayanks.png",
+    accent: "oklch(0.65 0.28 320)",
+  },
+   {
+    name: "Akansha S.",
+    role: "ui/ux designer",
+    img: "/assets/Aakansha.png",
     accent: "oklch(0.65 0.28 320)",
   },
  {
@@ -55,12 +67,7 @@ export const  homeData = {
     img: "/assets/neha.png",
     accent: "oklch(0.65 0.28 320)",
   },
-  {
-    name: "Akansha S.",
-    role: "ui/ux designer",
-    img: "/assets/Aakansha.png",
-    accent: "oklch(0.65 0.28 320)",
-  },
+ 
   {
   name: "Mayank S.",
   role: "Full Stack Developer",
@@ -80,12 +87,7 @@ export const  homeData = {
   img: "/assets/Shivam.png",
   accent: "oklch(0.65 0.28 320)",
 },
-  {
-    name: "Akansha S.",
-    role: "ui/ux designer",
-    img: "/assets/Aakansha.png",
-    accent: "oklch(0.65 0.28 320)",
-  },
+
 
  
  

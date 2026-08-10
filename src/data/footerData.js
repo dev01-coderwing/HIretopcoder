@@ -56,7 +56,7 @@ services: [
 
 ],
  
- socials : [{icon:FaLinkedinIn,to:"/"}, {icon:FaXTwitter,to:"/"}, {icon:FaGithub,to:"/"}, {icon:FaInstagram,to:"/"}, {icon:AiOutlineGlobal,to:"/"}],
+ socials : [{icon:FaLinkedinIn,to:"/"}, , {icon:FaGithub,to:"/"}, {icon:FaInstagram,to:"/"}, {icon:AiOutlineGlobal,to:"/"}],
   resourceLinks :[
   {
     id: 1,

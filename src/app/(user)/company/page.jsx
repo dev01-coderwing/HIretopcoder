@@ -60,10 +60,10 @@ const values = [
 ];
 
 const team = [
-  { n: "Aarav Mehta", r: "Founder & CEO", img: "/assets/arun.png" },
-  { n: "Lina Park", r: "Head of Product", img: "/assets/kajal.png" },
-  { n: "Marcus Reid", r: "Head of Talent", img: "/assets/neha.png" },
-  { n: "Sara Okafor", r: "Head of Design", img: "/assets/khushi.png" },
+  { n: "Arun Singh", r: "Founder & CEO", img: "/assets/Arunsir.png" },
+  { n: "Kajal Gurjar", r: "Head of Product", img: "/assets/kajal.png" },
+  { n: "Pawan Malvi", r: "Head of Talent", img: "/assets/Pawan.png" },
+  { n: "Akansha Soni", r: "Head of Design", img: "/assets/Aakansha.png" },
 ];
 
 const reasons = [

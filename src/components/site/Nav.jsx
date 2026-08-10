@@ -266,7 +266,7 @@ const pathname = usePathname()
                                 </div>
                               </div>
                             ) : (
-                              /* 🌟 पुराने ऑप्शंस (Services & Hire Developers) का मूल 4-कॉलम लेआउट सुरक्षित */
+                           
                               <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 xl:gap-10 2xl:gap-15 items-stretch">
                                 <div className="border-r border-white/10 pr-10 2xl:pr-5 flex flex-col w-full text-left">
                                   <div>
@@ -395,10 +395,9 @@ const pathname = usePathname()
               )})}
             </div>
           </div>
-          {/* राइट साइड बटन्स */}
           <div data-aos="fade-down" className="flex items-center gap-2">
             <Link
-              href="/signin"
+              href="/contact"
               className="hidden group sm:inline-flex items-center gap-2 text-sm lg:text-base 2xl:text-lg font-bold px-5 py-2 rounded-full expert-btn text-[#381385]"
             >
               Talk to Expert{" "}

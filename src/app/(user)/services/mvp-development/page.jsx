@@ -14,8 +14,8 @@ import Link from "next/link";
         eyebrow="Engineering Service"
         title={<>Investor-Ready <span className="text-primary">MVP in 12 Weeks</span></>}
         sub={<>Strategy, design, code, QA, and launch — one team, one timeline, <br/>one outcome you can show to investors.</>}
-         titleClassName="font-display font-bold leading-[0.95]  md:text-[clamp(2.75rem,8vw,7.5rem)] 2xl:text-[clamp(3rem,9vw,8.5rem)]
- "
+   titleClassName="text-[clamp(2.2rem,6vw,5.5rem)] md:text-[clamp(2.5rem,6vw,6rem)] 2xl:text-[clamp(2.8rem,7vw,6.5rem)]"
+
          notpt="notpt" />
       <Section   className="   ">
         <SectionTitle eyebrow="Included" title="What's in the box" />

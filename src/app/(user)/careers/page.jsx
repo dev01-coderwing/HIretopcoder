@@ -44,7 +44,7 @@ export default function CareersPage() {
           <div style={{   fontSize: 11, letterSpacing: 2, fontWeight: 600 }} className="uppercase text-primary">
             JOIN OUR TEAM
           </div>
-          <h1 style={{ fontSize: 48, fontWeight: 500, color: "#fff", letterSpacing: "-1.5px", marginTop: 16, lineHeight: 1.05 }}>
+          <h1 style={{ fontSize: 48, fontWeight: 500, color: "#fff", letterSpacing: "-1.5px", marginTop: 16, lineHeight: 1.05 }} className="text-[clamp(2.2rem,6vw,5.5rem)] md:text-[clamp(2.5rem,6vw,6rem)] 2xl:text-[clamp(2.8rem,7vw,6.5rem)]">
             Build the future of work.
           </h1>
           <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", maxWidth: 500, margin: "16px auto 0" }}>
@@ -53,9 +53,10 @@ export default function CareersPage() {
         </div>
 
         {/* CULTURE */}
-        <div className="mx-auto max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-4 mb-20">
+        <div className="mx-auto max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-4 mb-20 ">
           {culture.map((c) => (
             <div
+            className="hover-glow-card bg-[oklch(0.18_0.02_290_/_0.7)] border "
               key={c.t}
               style={{
                 background: "#0d0d0d",
@@ -81,7 +82,8 @@ export default function CareersPage() {
             {jobs.map((j) => (
               <div
                 key={j.t}
-                className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4"
+                className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 hover-glow-card bg-[oklch(0.18_0.02_290_/_0.7)]
+ "
                 style={{
                   background: "#0d0d0d",
                   border: "1px solid rgba(255,255,255,0.08)",

@@ -164,29 +164,27 @@ export default function Page() {
     //   </main>
     <section className="  w-full pt-30 md:pt-48 px-4 sm:px-6 lg:px-15 1xl:px-20 2xl:px-25">
       <Hero
-        heading={
-          <>
-          
-            {" "}
-            Dedicated{" "}
-            <span className="text-gradient-purple ">Expert Teams </span>
-          </>
-        }
-        des={
-          <>
-            Eliminate the friction of hiring. Get full-time, high-performance
-            developer <br />
-            teams hand-selected for your technical ecosystem and cultural
-            values.
-          </>
-        }
-        btn1name="Build Your Team"
-        btn1href="/hire"
-        btn2name="View Process"
-        btn2href="/"
-        className=" flex justify-center items-center  text-center  mx-auto"
-        className1="justify-center"
-      />
+  heading={
+    <>
+      Dedicated{" "}
+      <span className="text-gradient-purple">Expert Teams</span>
+    </>
+  }
+  des={
+    <>
+      Eliminate the friction of hiring. Get full-time, high-performance
+      developer <br />
+      teams hand-selected for your technical ecosystem and cultural values.
+    </>
+  }
+  btn1name="Build Your Team"
+  btn1href="/hire"
+  btn2name="View Process"
+  btn2href="/"
+  className="flex justify-center items-center text-center mx-auto"
+  className1="justify-center"
+  titleClassName="text-[clamp(2.2rem,6vw,5.5rem)] md:text-[clamp(2.5rem,6vw,6rem)] 2xl:text-[clamp(2.8rem,7vw,6.5rem)]"
+/>
       <div className="grid pt-10 pb-20 lg:mt-25 gap-15 lg:gap-30">
         <Reveal>
           <div className="grid justify-center items-center gap-15 pt-15 ">

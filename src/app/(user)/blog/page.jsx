@@ -166,7 +166,7 @@ export default function BlogPage() {
       {/* LATEST BLOGS */}
     <section
           id="blog"
-          className=" py-10 lg:py-20 overflow-hidden  bg-[#0A0A0A]   "
+          className=" py-10 lg:py-20 overflow-hidden  bg-[#0A0A0A] rounded-2xl  "
         >
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[700px] rounded-full bg-primary/10 blur-[160px] pointer-events-none" />
             <Reveal> <div className="relative w-full">
@@ -179,7 +179,7 @@ export default function BlogPage() {
                   <span className="text-gradient-purple">digital innovation.</span>
                 </>
               }
-               titleClassName="font-display font-bold leading-[0.95] md:text-[clamp(2.75rem,8vw,7.5rem)] 2xl:text-[clamp(3rem,9vw,8.5rem)]"
+              titleClassName="text-[clamp(2.2rem,6vw,5.5rem)] md:text-[clamp(2.5rem,6vw,6rem)] 2xl:text-[clamp(2.8rem,7vw,6.5rem)]"
               sub="Explore the latest thoughts on design, AI, branding, product development and modern digital experiences."
             />
          

@@ -16,8 +16,17 @@ export default function Page() {
   return (
  <main className=" w-full"    >
       <div className="pt-10 md:pt-14 "><Breadcrumb items={[{ label: "Home", to: "/" }, { label: "Resources" }, { label: "Dev Rates 2026" }]} /></div>
-      <PageHero eyebrow="Guide · Updated June 2026" title={<>Offshore Developer <span className="text-primary">Rates 2026</span></>} sub="Benchmark rates for the regions and stacks that actually matter, refreshed quarterly." />
-      <Section className="  ">
+<PageHero
+  eyebrow="Guide · Updated June 2026"
+  title={
+    <>
+      Offshore Developer{" "}
+      <span className="text-primary">Rates 2026</span>
+    </>
+  }
+  sub="Benchmark rates for the regions and stacks that actually matter, refreshed quarterly."
+  titleClassName="font-display font-bold leading-[0.95] text-[clamp(2.2rem,6vw,5.5rem)] md:text-[clamp(2.5rem,6vw,6rem)] 2xl:text-[clamp(2.8rem,7vw,6.5rem)]"
+/>      <Section className="  ">
         <SectionTitle eyebrow="Region" title="Rate Comparison by Region" />
         <ComparisonTable
           className="hover-glow-card bg-[oklch(0.18_0.02_290_/_0.7)]"
